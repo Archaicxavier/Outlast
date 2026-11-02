@@ -2,6 +2,11 @@
 # Outlast
 ## Player
 
+## Docs
+
+[OutlastDocs](https://github.com/Archaicxavier/Outlast/tree/main/docs)
+![OutlastGamePitch](https://github.com/Archaicxavier/Outlast/blob/main/docs/_Outlast%20Game%20Pitch.pdf)
+
 ## Goal 
 ### Fight Monsters and defeat 1 or more bosses to beat the game
 ## Core Action
