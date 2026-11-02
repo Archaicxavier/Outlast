@@ -31,3 +31,8 @@
 ## Class Diagram:
 
 ![Class Diagram](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/ClassDiagram-Outlast.png)
+
+## Pitch Document:
+
+![Pitch Document](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/PitchDoc.jpeg)
+
