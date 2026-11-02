@@ -36,3 +36,5 @@
 
 ![Pitch Document](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/PitchDocUpdated.jpeg)
 
+![Idea Seed to Game Pitch](https://github.com/Archaicxavier/Outlast/blob/main/images/IdeaSeedToGamePitch.jpeg)
+
