@@ -18,7 +18,8 @@
 
 ![Pokemon](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/Pokemon.jpeg)
 
-## GUI Mockup:
+## GUI Mockups:
+![Title GUI](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/Title-GUI.jpg)
 
 ![Battle GUI](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/GUI-Mockup.jpg)
 
@@ -26,6 +27,7 @@
 
 ![Battle GUI (Spells)](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/Spell-Mockup.jpg)
 
+![Loss GUI](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/Game-Over-GUI.jpg)
 ## Class Diagram:
 
 ![Class Diagram](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/ClassDiagram-Outlast.png)
