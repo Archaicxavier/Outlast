@@ -30,7 +30,7 @@
 ![Loss GUI](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/Game-Over-GUI.jpg)
 ## Class Diagram:
 
-![Class Diagram](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/ClassDiagram-Outlast.png)
+![Class Diagram](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/ClassDiagram-Outlast.jpg)
 
 ## Pitch Document:
 
