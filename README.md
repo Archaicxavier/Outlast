@@ -34,5 +34,5 @@
 
 ## Pitch Document:
 
-![Pitch Document](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/PitchDoc.jpeg)
+![Pitch Document](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/PitchDocUpdated.jpeg)
 
