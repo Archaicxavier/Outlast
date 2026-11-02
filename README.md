@@ -18,3 +18,8 @@
 
 ![Pokemon](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/Pokemon.jpeg)
 
+![Battle GUI](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/GUI-Mockup.jpg)
+
+![Battle GUI (Abilities)](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/Ability-Mockup.jpg)
+
+![Battle GUI (Spells)](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/Spell-Mockup.jpg)
