@@ -4,7 +4,7 @@
 ## The player will explore around the map and fight enemies that have different strengths and weaknesses 
 
 ## Docs
-[OutlastDocs](https://github.com/Archaicxavier/Outlast/tree/main/docs)
+![OutlastDocs](https://github.com/Archaicxavier/Outlast/tree/main/docs)
 
 ![OutlastGamePitch](https://github.com/Archaicxavier/Outlast/blob/main/docs/_Outlast%20Game%20Pitch.pdf)
 
