@@ -1,5 +1,6 @@
 # GameDevGroup1
-# Outlast
+# Outlast 
+## Turn Based Combat Game
 ## Player
 ## The player will explore around the map and fight enemies that have different strengths and weaknesses 
 
