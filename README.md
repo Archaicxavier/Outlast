@@ -23,3 +23,7 @@
 ![Battle GUI (Abilities)](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/Ability-Mockup.jpg)
 
 ![Battle GUI (Spells)](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/Spell-Mockup.jpg)
+
+## Class Diagram:
+
+![Class Diagram](https://github.com/Archaicxavier/gamedevgroup/blob/main/images/ClassDiagram-Outlast.png)
