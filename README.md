@@ -1,6 +1,7 @@
 # GameDevGroup1
 # Outlast
 ## Player
+## The player will explore around the map and fight enemies that have different strengths and weaknesses 
 
 ## Docs
 [OutlastDocs](https://github.com/Archaicxavier/Outlast/tree/main/docs)
