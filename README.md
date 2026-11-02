@@ -7,8 +7,6 @@
 ## Docs
 [OutlastDocs](https://github.com/Archaicxavier/Outlast/tree/main/docs)
 
-![ OutlastGamePitch ]( https://github.com/Archaicxavier/Outlast/blob/main/docs/_Outlast%20Game%20Pitch.pdf )
-
 ## Source Code(src)
 
 [Source Code](https://github.com/Archaicxavier/Outlast/tree/main/src)
