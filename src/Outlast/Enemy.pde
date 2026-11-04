@@ -18,7 +18,7 @@ class Enemy {
   // Member Methods
   void Display() {
     rect(100,100,100,100);
-    e1(100, 100)
+    image(e1, 100, 100)
   }
 
   void Attack() {}
