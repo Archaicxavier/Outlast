@@ -22,7 +22,7 @@ class Player {
 
   // Member methods
   void display() {
-    p1(x, y)
+    image(p1, x, y)
   }
 
   void attack() {
