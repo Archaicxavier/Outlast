@@ -1,7 +1,7 @@
 // brodden spendlove
 class Player{
 //member variables
-int x, y, Health,MaxHealth, acc;
+int x, y, Health,MaxHealth;
 char type;
 string name, damageType, sound, animation;
 PImage ability;
@@ -9,11 +9,11 @@ PImage ability;
 Player(int x, int y) {
 this.x=x;
 this.y=y;
-dam=20;
-acc=80;
+health=100;
+maxhealth=150;
 type='';
 name="";
-damageType="";
+healthType="";
 sound="";
 animation="";
 ability = loadimage("");
