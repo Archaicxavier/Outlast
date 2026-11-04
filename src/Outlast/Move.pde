@@ -3,7 +3,7 @@ class Move{
 //member variables
 int x, y, dam, acc;
 char type;
-string name, damageType, sound, animation;
+String name, damageType, sound, animation;
 PImage ability;
 //Constructor
 Move(int x, int y) {
