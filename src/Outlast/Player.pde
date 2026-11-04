@@ -3,7 +3,7 @@ class Player{
 //member variables
 int x, y, Health,MaxHealth;
 char type;
-string name, damageType, sound, animation;
+string name, healthType, sound, animation;
 PImage ability;
 //Constructor
 Player(int x, int y) {
