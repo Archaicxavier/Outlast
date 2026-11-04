@@ -12,7 +12,7 @@ this.y=y;
 dam=20;
 acc=80;
 type='a';
-name="";
+name="Ability Name";
 damageType="";
 sound="";
 animation="";
@@ -21,7 +21,7 @@ ability = loadImage("");
 //member methods
 void display() {
 fill(200, 20, 150);
-rect(x, y, 100, 100);
+name(x, y, 100, 100);
 //replace rect with ability name
 }
 void execute() {}
