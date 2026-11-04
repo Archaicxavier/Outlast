@@ -1,5 +1,13 @@
 //Xavier Probasco
+Move hi;
+void setup() {
+  size(displayWidth, displayHeight);
+  hi= new Move(100, 100);
+}
 
-void setup() {}
+void draw() {
+  background(127);
+  hi.display();
+}
 
-void draw() {}
+void keyPressed() {}
