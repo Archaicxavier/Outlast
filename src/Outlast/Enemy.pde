@@ -1,16 +1,19 @@
 // Aristotle Stokes
 class Enemy {
   // Member Variables
-  int hp, maxHp, defense, expReward;
+  int hp, maxHp, defense, expReward,x,y;
   ArrayList moves;
   PImage e1;
 
   // Constructor
   Enemy(){
+    this.x = x;
+    this.y = y;
     this.hp = hp;
     this.maxHp = maxHp;
     this.defense = defense;
     this.expReward = expReward;
+    e1 = loadImage("");
   }
   // Member Methods
   void Display() {
