@@ -19,6 +19,10 @@ animation="";
 ability = loadimage("");
 }
 //member methods
-void display() {}
+void display() {
+fill(200, 20, 150);
+rect(x, y, 100, 100);
+//replace rect with ability name
+}
 void execute() {}
 }
