@@ -1,24 +1,27 @@
 // brodden spendlove
-class Player{
-//member variables
-int x, y;
-char type;
-String name, healthType, sound, animation;
-PImage ability;
-//Constructor
-Player(int x, int y) {
-this.x=x;
-this.y=y;
-//Health=100;
-//MaxHealth=150;
-//type='';
-name="";
-healthType="";
-sound="";
-animation="";
-//ability = loadimage("");
-}
-//member methods
-void display() {}
-void execute() {}
+class Player {
+  // Member variables
+  int x, y, w, h, maxHealth, health;
+  PImage player; 
+  PImage p1;
+  char type;
+  String name, healthType, sound, animation;
+
+  // Constructor
+  Player(int x, int y) {
+    this.x = x;
+    this.y = y;
+    health = 100;
+    maxHealth = 150;
+    name = "";
+    healthType = "";
+    sound = "";
+    animation = "";
+    player = loadImage(""); // Put Image name in here
+    
+  }
+
+  // Member methods
+  void display() {}
+  void execute() {}
 }
