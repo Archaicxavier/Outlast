@@ -2,7 +2,6 @@
 class Enemy {
   // Member Variables
   int hp, maxHp, defense, expReward,x,y;
-  ArrayList moves;
   PImage e1;
 
   // Constructor
@@ -13,15 +12,15 @@ class Enemy {
     this.maxHp = maxHp;
     this.defense = defense;
     this.expReward = expReward;
-    e1 = loadImage("TempEnemy.png");
+    e1 = loadImage("");
   }
   // Member Methods
-  void Display() {
-    rect(100,100,100,100);
-    image(e1, 100, 100)
+  void display() {
+    fill(0,0,200);
+    rect(x,y,100,100);
   }
 
-  void Attack() {}
+  void attack() {}
   void takeDamage() {}
   void isAlive() {}
   void chooseMove() {}
