@@ -13,11 +13,12 @@ class Enemy {
     this.maxHp = maxHp;
     this.defense = defense;
     this.expReward = expReward;
-    e1 = loadImage("");
+    e1 = loadImage("TempEnemy.png");
   }
   // Member Methods
   void Display() {
     rect(100,100,100,100);
+    e1(100, 100)
   }
 
   void Attack() {}
