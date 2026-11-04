@@ -11,12 +11,12 @@ this.x=x;
 this.y=y;
 dam=20;
 acc=80;
-type='';
+type='a';
 name="";
 damageType="";
 sound="";
 animation="";
-ability = loadimage("");
+ability = loadImage("");
 }
 //member methods
 void display() {
