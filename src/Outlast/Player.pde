@@ -1,7 +1,7 @@
 // brodden spendlove
 class Player{
 //member variables
-int x, y, dam, acc;
+int x, y, Health,MaxHealth, acc;
 char type;
 string name, damageType, sound, animation;
 PImage ability;
