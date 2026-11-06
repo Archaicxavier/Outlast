@@ -12,8 +12,9 @@ void setup() {
 void draw() {
   background(127);
   hi.display();
-  hola.Display();
+  hola.display();
   bonjour.display();
+  hi.execute();
 }
 
 void keyPressed() {}
