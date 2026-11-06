@@ -16,6 +16,7 @@ class Enemy {
   }
   // Member Methods
   void display() {
+    strokeWeight(0);
     fill(0,0,200);
     rect(x,y,100,100);
   }
