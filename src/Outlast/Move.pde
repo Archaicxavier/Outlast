@@ -15,12 +15,19 @@ name="Ability Name";
 damageType="";
 sound="";
 animation="";
+textMode(CENTER);
 }
 //member methods
 void display() {
 fill(200, 20, 150);
-text(name, x, y, 100, 100);
+text(name, x, y);
 //replace rect with ability name
 }
-void execute() {}
+void execute() {
+  if(keyCode==ENTER) {
+    fill(200, 30, 40);
+    textSize(40);
+    text(name, x, y);
+  }
+}
 }
