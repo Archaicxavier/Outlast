@@ -29,10 +29,8 @@ class Move {
     //replace rect with ability name
   }
   void execute() {
-    if (keyCode==ENTER) {
       fill(200, 30, 40);
       textSize(35);
       text(name, x, y);
     }
   }
-}
