@@ -6,7 +6,7 @@ void setup() {
   size(displayWidth, displayHeight);
   hi= new Move(50, 800);
   hola = new Enemy(200, 300);
-  bonjour = new Player(50,50);
+  bonjour = new Player(50, 50);
 }
 
 void draw() {
@@ -16,7 +16,10 @@ void draw() {
   hi.display();
   hola.display();
   bonjour.display();
-  hi.execute();
 }
 
-void keyPressed() {}
+void keyPressed() {
+  if (keyCode==ENTER) {
+    hi.execute();
+  }
+}
