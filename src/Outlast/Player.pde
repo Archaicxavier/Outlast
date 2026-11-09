@@ -16,7 +16,7 @@ class Player {
     level = 1;
     defence = 5;
     effect = ' ';
-    p1 = loadImage("TempPlayer.png"); // Put image name in here
+    p1 = loadImage("player1.png"); // Put image name in here
     moves = new ArrayList<String>();
   }
 
