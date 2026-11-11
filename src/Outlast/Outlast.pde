@@ -41,16 +41,30 @@ void draw() {
   bonjour.display();
 }
 void keyPressed() {
-  if(keyCode==LEFT) {
+  if (keyCode==LEFT && abilities==false) {
     arrowX=13;
-  } else if(keyCode==RIGHT) {
+  } else if (keyCode==RIGHT && abilities==false) {
     arrowX=293;
-  } else if(keyCode==UP) {
+  } else if (keyCode==UP && abilities==false) {
     arrowY=776;
-  } else if(keyCode==DOWN) {
+  } else if (keyCode==DOWN && abilities==false) {
     arrowY=936;
   }
+  if (keyCode==LEFT && abilities==true) {
+    arrowX=13;
+  }
+  if (keyCode==RIGHT && abilities==true) {
+    arrowX=293;
+  }
+  if (keyCode==UP && abilities==true && arrowY>776) {
+    arrowY=arrowY-80;
+  }
+  if (keyCode==DOWN && abilities==true && arrowY<936) {
+    arrowY=arrowY+80;
+  }
+
   if (keyCode==ENTER && arrowX==293 && arrowY==776) {
     abilities = true;
   }
 }
+
