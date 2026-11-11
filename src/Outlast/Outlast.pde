@@ -6,9 +6,9 @@ boolean abilities;
 int arrowX, arrowY;
 PImage arrow,bg1;
 void setup() {
-  size(1950, 1050);
+  size(1950, 1025);
   bg1 = loadImage("TestBg.png");
-  bg1.resize(1950, 1050);
+  bg1.resize(1950, 1025);
   Attack= new Move(50, 800, "Attack");
   Abilities = new Move(330, 800, "Abilities");
   Spells = new Move(50, 960, "Spells");
@@ -67,4 +67,3 @@ void keyPressed() {
     abilities = true;
   }
 }
-
