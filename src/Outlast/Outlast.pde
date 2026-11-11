@@ -4,9 +4,11 @@ Enemy hola;
 Player bonjour;
 boolean abilities;
 int arrowX, arrowY;
-PImage arrow;
+PImage arrow,bg1;
 void setup() {
   size(1950, 1050);
+  bg1 = loadImage("TestBg.png")
+  bg1.resize(1950, 1050);
   Attack= new Move(50, 800, "Attack");
   Abilities = new Move(330, 800, "Abilities");
   Spells = new Move(50, 960, "Spells");
@@ -20,7 +22,7 @@ void setup() {
 }
 
 void draw() {
-  background(127);
+  background(bg1);
   fill(10);
   stroke(255);
   strokeWeight(4);
