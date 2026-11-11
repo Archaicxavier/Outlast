@@ -31,5 +31,11 @@ class Move {
     fill(200, 30, 40);
     textSize(35);
     text("Ability 1", 50, 800);
+    text("Ability 2", 330, 800);
+    text("Ability 3", 50, 880);
+    text("Ability 4", 330, 880);
+    text("Ability 5", 50, 960);
+    text("Ability 6", 330, 960);
+    
   }
 }
