@@ -30,6 +30,6 @@ class Move {
     rect(0, 726, 500, 300);
     fill(200, 30, 40);
     textSize(35);
-    text("Ability 1", x, y);
+    text("Ability 1", 50, 800);
   }
 }
