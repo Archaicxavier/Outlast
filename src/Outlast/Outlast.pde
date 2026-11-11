@@ -4,6 +4,7 @@ Enemy hola;
 Player bonjour;
 boolean abilities;
 int arrowX, arrowY;
+PImage arrow;
 void setup() {
   size(1950, 1050);
   Attack= new Move(50, 800, "Attack");
@@ -13,6 +14,9 @@ void setup() {
   hola = new Enemy(200, 300);
   bonjour = new Player(50, 50);
   abilities=false;
+  arrow=loadImage("Arrow.png");
+  arrowX=13;
+  arrowY=776;
 }
 
 void draw() {
@@ -27,16 +31,24 @@ void draw() {
     Spells.display();
     Defend.display();
   } else {
-    Attack.abilities();
+    Abilities.abilities();
   }
-
+  image(arrow, arrowX, arrowY);
 
   hola.display();
   bonjour.display();
 }
 void keyPressed() {
-  
-  if (keyCode==ENTER && arrowX==0) {
+  if(keyCode==LEFT) {
+    arrowX=13;
+  } else if(keyCode==RIGHT) {
+    arrowX=293;
+  } else if(keyCode==UP) {
+    arrowY=776;
+  } else if(keyCode==DOWN) {
+    arrowY=936;
+  }
+  if (keyCode==ENTER && arrowX==293 && arrowY==776) {
     abilities = true;
   }
 }
