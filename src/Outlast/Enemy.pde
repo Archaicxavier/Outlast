@@ -1,8 +1,10 @@
 // Aristotle Stokes
 class Enemy {
   // Member Variables
-  int hp, maxHp, defense, expReward,x,y;
+  int hp, maxHp, defense, expReward,x,y, chosenMove;
   PImage e1;
+  Move bite, scratch, punch, burn;
+  Move[] moves;
 
   // Constructor
   Enemy(int x, int y){
@@ -13,6 +15,12 @@ class Enemy {
     this.defense = defense;
     this.expReward = expReward;
     e1 = loadImage("EnemyNo.1.png");
+    bite = new Move(0,0,"Bite");
+    scratch = new Move(0,0,"Scratch");
+    punch = new Move(0,0,"Punch");
+    burn = new Move(0,0,"Burn");
+    
+    moves = new Move [] {bite,scratch,punch,burn};
   }
   // Member Methods
   void display() {
@@ -24,5 +32,8 @@ class Enemy {
   void attack() {}
   void takeDamage() {}
   void isAlive() {}
-  void chooseMove() {}
+  void chooseMove() {
+    //int index = int(random(moves.length));
+    //chosenMove = moves[index];
+  }
   }
