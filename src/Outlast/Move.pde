@@ -1,7 +1,7 @@
 //Xavier Probasco
 class Move {
   //member variables
-  int x, y, dam, acc;
+  int x, y, dam, acc, MPCost;
   char type;
   String name, sound, animation;
   boolean PhysDam;
