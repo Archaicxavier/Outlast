@@ -1,8 +1,8 @@
-//Xavier Probasco
+//Xavier Probasco || Outlast || 11/1
 Move Attack, Abilities, Spells, Defend;
 Enemy hola;
 Player bonjour;
-boolean abilities;
+boolean abilities, spells;
 int arrowX, arrowY;
 PImage arrow,bg1;
 void setup() {
@@ -27,13 +27,15 @@ void draw() {
   stroke(255);
   strokeWeight(4);
   rect(0, 726, 500, 300);
-  if (abilities == false) {
+  if (abilities == false && spells == false) {
     Attack.display();
     Abilities.display();
     Spells.display();
     Defend.display();
-  } else {
+  } else if (abilities == true && spells == false){
     Abilities.abilities();
+  } else if (abilities == false && spells == true){
+    Spells.spells();
   }
   image(arrow, arrowX, arrowY);
 
@@ -41,13 +43,13 @@ void draw() {
   bonjour.display();
 }
 void keyPressed() {
-  if (keyCode==LEFT && abilities==false) {
+  if (keyCode==LEFT && abilities==false && spells==false) {
     arrowX=13;
-  } else if (keyCode==RIGHT && abilities==false) {
+  } else if (keyCode==RIGHT && abilities==false && spells==false) {
     arrowX=293;
-  } else if (keyCode==UP && abilities==false) {
+  } else if (keyCode==UP && abilities==false && spells==false) {
     arrowY=776;
-  } else if (keyCode==DOWN && abilities==false) {
+  } else if (keyCode==DOWN && abilities==false && spells==false) {
     arrowY=936;
   }
   if (keyCode==LEFT && abilities==true) {
@@ -62,8 +64,22 @@ void keyPressed() {
   if (keyCode==DOWN && abilities==true && arrowY<936) {
     arrowY=arrowY+80;
   }
-
+  if (keyCode==LEFT && spells==true) {
+    arrowX=13;
+  }
+  if (keyCode==RIGHT && spells==true) {
+    arrowX=293;
+  }
+  if (keyCode==UP && spells==true && arrowY>776) {
+    arrowY=arrowY-80;
+  }
+  if (keyCode==DOWN && spells==true && arrowY<936) {
+    arrowY=arrowY+80;
+  }
   if (keyCode==ENTER && arrowX==293 && arrowY==776) {
     abilities = true;
+  }
+  if (keyCode==ENTER && arrowX==13 && arrowY==936) {
+    spells = true;
   }
 }
