@@ -3,16 +3,17 @@ class Move {
   //member variables
   int x, y, dam, acc;
   char type;
-  String name, damageType, sound, animation;
+  String name, sound, animation;
+  boolean PhysDam;
   //Constructor
-  Move(int x, int y, String name) {
+  Move(int x, int y, String name, boolean PhysDam) {
     this.x=x;
     this.y=y;
     dam=20;
     acc=80;
     this.name=name;
+    this.PhysDam=PhysDam;
     type='a';
-    damageType="";
     sound="";
     animation="";
     textMode(CENTER);
