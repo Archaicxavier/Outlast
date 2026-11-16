@@ -1,5 +1,5 @@
 //Xavier Probasco || Outlast || 11/1
-Move Attack, Abilities, Spells, Defend;
+Move Attack, Burn, Freeze, Flood, Shock, Heal, Protect, Defend;
 Enemy hola;
 Player bonjour;
 boolean abilities, spells;
@@ -10,8 +10,12 @@ void setup() {
   bg1 = loadImage("TestBg.png");
   bg1.resize(1950, 1025);
   Attack= new Move(50, 800, "Attack", true);
-  Abilities = new Move(330, 800, "Abilities", true);
-  Spells = new Move(50, 960, "Spells", false);
+  Burn= new Move(50, 800, "Burn", false);
+  Freeze= new Move(330, 800, "Freeze", false);
+  Flood= new Move(50, 880, "Shock", false);
+  Shock= new Move(330, 880, "Flood", false);
+  Heal= new Move(50, 960, "Heal", false);
+  Protect= new Move(330, 960, "Protect", false);
   Defend = new Move(330, 960, "Defend", true);
   hola = new Enemy(200, 300);
   bonjour = new Player(50, 50);
@@ -29,13 +33,23 @@ void draw() {
   rect(0, 726, 500, 300);
   if (abilities == false && spells == false) {
     Attack.display();
-    Abilities.display();
-    Spells.display();
+    text("Abilities", 330, 800);
+    text("Spells", 50, 960);
     Defend.display();
   } else if (abilities == true && spells == false){
-    Abilities.abilities();
+    Burn.display();
+    Flood.display();
+    Shock.display();
+    Freeze.display();
+    Heal.display();
+    Protect.display();
   } else if (abilities == false && spells == true){
-    Spells.spells();
+    Burn.display();
+    Flood.display();
+    Shock.display();
+    Freeze.display();
+    Heal.display();
+    Protect.display();
   }
   image(arrow, arrowX, arrowY);
 
