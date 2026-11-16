@@ -9,10 +9,10 @@ void setup() {
   size(1950, 1025);
   bg1 = loadImage("TestBg.png");
   bg1.resize(1950, 1025);
-  Attack= new Move(50, 800, "Attack");
-  Abilities = new Move(330, 800, "Abilities");
-  Spells = new Move(50, 960, "Spells");
-  Defend = new Move(330, 960, "Defend");
+  Attack= new Move(50, 800, "Attack", true);
+  Abilities = new Move(330, 800, "Abilities", true);
+  Spells = new Move(50, 960, "Spells", false);
+  Defend = new Move(330, 960, "Defend", true);
   hola = new Enemy(200, 300);
   bonjour = new Player(50, 50);
   abilities=false;
