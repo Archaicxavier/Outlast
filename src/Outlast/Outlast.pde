@@ -82,4 +82,8 @@ void keyPressed() {
   if (keyCode==ENTER && arrowX==13 && arrowY==936) {
     spells = true;
   }
+  if (keyCode==BACKSPACE) {
+    spells = false;
+    abilities= false;
+  }
 }
