@@ -3,7 +3,7 @@ class Enemy {
   // Member Variables
   int hp, maxHp, defense, expReward,x,y, chosenMove;
   PImage e1;
-  Move bite, scratch, punch, burn;
+  Move bite,scratch,punch,burn;
   Move[] moves;
 
   // Constructor
@@ -33,7 +33,7 @@ class Enemy {
   void takeDamage() {}
   void isAlive() {}
   void chooseMove() {
-    //int index = int(random(moves.length));
-    //chosenMove = moves[index];
+    int index = int(random(moves.length));
+    chosenMove = index;
   }
   }
