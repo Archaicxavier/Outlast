@@ -11,7 +11,7 @@ void setup() {
   bg1.resize(1950, 1025);
   Attack= new Move(50, 800, "Attack", "", true);
   FlameSlash= new Move(50, 800, "Flame Slash", "Attack with your sword ablaze.", true);
-  RecklessHit= new Move(330, 800, "Reckless Hit", "Abandon all semblance of defence in favor of a stronger attack.", true);
+  RecklessHit= new Move(330, 800, "Reckless Hit", "Abandon all semblance of\n defence in favor of a stronger\n attack.", true);
   Burn= new Move(50, 800, "Burn", "Scorch an enemy with blazing fire.", false);
   Freeze= new Move(330, 800, "Freeze", "Freeze an enemy in solid ice before breaking it apart.", false);
   Flood= new Move(50, 880, "Shock", "Shock an enemy with a bolt from the heavens above.", false);
@@ -32,7 +32,7 @@ void draw() {
   fill(10);
   stroke(255);
   strokeWeight(4);
-  rect(0, 726, 500, 300);
+  rect(0, 726, 550, 300);
   if (abilities == false && spells == false) {
     Attack.display();
     text("Abilities", 330, 800);
@@ -41,10 +41,6 @@ void draw() {
   } else if (abilities == true && spells == false){
     FlameSlash.display();
     RecklessHit.display();
-    Shock.display();
-    Freeze.display();
-    Heal.display();
-    Protect.display();
   } else if (abilities == false && spells == true){
     Burn.display();
     Flood.display();
@@ -52,6 +48,11 @@ void draw() {
     Freeze.display();
     Heal.display();
     Protect.display();
+  } 
+  if (abilities == true && arrowX == 13 && arrowY == 776) {
+    FlameSlash.desc();
+  } else if (abilities == true && arrowX == 293 && arrowY == 776) {
+    RecklessHit.desc();
   }
   image(arrow, arrowX, arrowY);
 
