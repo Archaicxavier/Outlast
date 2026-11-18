@@ -1,5 +1,5 @@
 //Xavier Probasco || Outlast || 11/1
-Move Attack, Burn, Freeze, Flood, Shock, Heal, Protect, Defend;
+Move Attack,FlameSlash, RecklessHit, Burn, Freeze, Flood, Shock, Heal, Protect, Defend;
 Enemy hola;
 Player bonjour;
 boolean abilities, spells;
@@ -9,14 +9,16 @@ void setup() {
   size(1950, 1025);
   bg1 = loadImage("TestBg.png");
   bg1.resize(1950, 1025);
-  Attack= new Move(50, 800, "Attack", true);
-  Burn= new Move(50, 800, "Burn", false);
-  Freeze= new Move(330, 800, "Freeze", false);
-  Flood= new Move(50, 880, "Shock", false);
-  Shock= new Move(330, 880, "Flood", false);
-  Heal= new Move(50, 960, "Heal", false);
-  Protect= new Move(330, 960, "Protect", false);
-  Defend = new Move(330, 960, "Defend", true);
+  Attack= new Move(50, 800, "Attack", "", true);
+  FlameSlash= new Move(50, 800, "Flame Slash", "Attack with your sword ablaze.", true);
+  RecklessHit= new Move(330, 800, "Reckless Hit", "Abandon all semblance of defence in favor of a stronger attack.", true);
+  Burn= new Move(50, 800, "Burn", "Scorch an enemy with blazing fire.", false);
+  Freeze= new Move(330, 800, "Freeze", "Freeze an enemy in solid ice before breaking it apart.", false);
+  Flood= new Move(50, 880, "Shock", "Shock an enemy with a bolt from the heavens above.", false);
+  Shock= new Move(330, 880, "Flood", "Drown all enemies out with a flood", false);
+  Heal= new Move(50, 960, "Heal", "Restore some health to yourself", false);
+  Protect= new Move(330, 960, "Protect", "Create a barrier from thin air that increases your defense for 5 turns.", false);
+  Defend = new Move(330, 960, "Defend", "", true);
   hola = new Enemy(200, 300);
   bonjour = new Player(50, 50);
   abilities=false;
@@ -37,8 +39,8 @@ void draw() {
     text("Spells", 50, 960);
     Defend.display();
   } else if (abilities == true && spells == false){
-    Burn.display();
-    Flood.display();
+    FlameSlash.display();
+    RecklessHit.display();
     Shock.display();
     Freeze.display();
     Heal.display();
