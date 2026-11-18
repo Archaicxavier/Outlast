@@ -105,11 +105,13 @@ void keyPressed() {
   if (keyCode==DOWN && spells==true && arrowY<936) {
     arrowY=arrowY+80;
   }
-  if (keyCode==ENTER && arrowX==293 && arrowY==776) {
+  if (keyCode==ENTER && arrowX==293 && arrowY==776 && spells==false && abilities==false) {
     abilities = true;
+    arrowX=13;
   }
-  if (keyCode==ENTER && arrowX==13 && arrowY==936) {
+  if (keyCode==ENTER && arrowX==13 && arrowY==936 && spells==false && abilities==false) {
     spells = true;
+    arrowY=776;
   }
   if (keyCode==BACKSPACE) {
     spells = false;
