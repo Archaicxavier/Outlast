@@ -25,34 +25,14 @@ class Move {
     textSize(35);
     text(name, x, y);
   }
-  void abilities() {
+ 
+  void desc() {
     stroke(255);
     strokeWeight(4);
     fill(10);
-    rect(0, 726, 500, 300);
-    fill(200, 30, 40);
-    textSize(35);
-    text("Ability 1", 50, 800);
-    text("Ability 2", 330, 800);
-    text("Ability 3", 50, 880);
-    text("Ability 4", 330, 880);
-    text("Ability 5", 50, 960);
-    text("Ability 6", 330, 960);
-    
-  }
-  void spells() {
-    stroke(255);
-    strokeWeight(4);
-    fill(10);
-    rect(0, 726, 500, 300);
-    fill(200, 30, 40);
-    textSize(35);
-    text("Spell 1", 50, 800);
-    text("Spell 2", 330, 800);
-    text("Spell 3", 50, 880);
-    text("Spell 4", 330, 880);
-    text("Spell 5", 50, 960);
-    text("Spell 6", 330, 960);
+    rect(600, 726, 500, 300);
+    fill(200, 20, 150);
+    text(desc, 620, 780);
     
   }
 }
