@@ -12,12 +12,12 @@ void setup() {
   Attack= new Move(50, 800, "Attack", "", true);
   FlameSlash= new Move(50, 800, "Flame Slash", "Attack with your sword ablaze.", true);
   RecklessHit= new Move(330, 800, "Reckless Hit", "Abandon all semblance of\n defence in favor of a stronger\n attack.", true);
-  Burn= new Move(50, 800, "Burn", "Scorch an enemy with blazing fire.", false);
-  Freeze= new Move(330, 800, "Freeze", "Freeze an enemy in solid ice before breaking it apart.", false);
-  Flood= new Move(50, 880, "Shock", "Shock an enemy with a bolt from the heavens above.", false);
-  Shock= new Move(330, 880, "Flood", "Drown all enemies out with a flood", false);
+  Burn= new Move(50, 800, "Burn", "Scorch an enemy with blazing\n fire.", false);
+  Freeze= new Move(330, 800, "Freeze", "Freeze an enemy in solid ice\n before breaking it apart.", false);
+  Flood= new Move(50, 880, "Shock", "Shock an enemy with a bolt \nfrom the heavens above.", false);
+  Shock= new Move(330, 880, "Flood", "Drown all enemies out with a\n flood", false);
   Heal= new Move(50, 960, "Heal", "Restore some health to yourself", false);
-  Protect= new Move(330, 960, "Protect", "Create a barrier from thin air that increases your defense for 5 turns.", false);
+  Protect= new Move(330, 960, "Protect", "Create a barrier from thin air\n that increases your defense for\n 5 turns.", false);
   Defend = new Move(330, 960, "Defend", "", true);
   hola = new Enemy(200, 300);
   bonjour = new Player(50, 50);
@@ -53,7 +53,19 @@ void draw() {
     FlameSlash.desc();
   } else if (abilities == true && arrowX == 293 && arrowY == 776) {
     RecklessHit.desc();
-  }
+  } else if (spells == true && arrowX == 293 && arrowY == 776) {
+    Freeze.desc();
+  } else if (spells == true && arrowX == 13 && arrowY == 776) {
+    Burn.desc();
+  } else if (spells == true && arrowX == 13 && arrowY == 856) {
+    Flood.desc();
+  } else if (spells == true && arrowX == 293 && arrowY == 856) {
+    Shock.desc();
+  } else if (spells == true && arrowX == 13 && arrowY == 936) {
+    Heal.desc();
+  } else if (spells == true && arrowX == 293 && arrowY == 936) {
+    Protect.desc();
+  } 
   image(arrow, arrowX, arrowY);
 
   hola.display();
