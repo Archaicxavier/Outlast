@@ -15,10 +15,10 @@ class Enemy {
     this.defense = defense;
     this.expReward = expReward;
     e1 = loadImage("EnemyNo.1.png");
-    bite = new Move(0, 0, "Bite");
-    scratch = new Move(0, 0, "Scratch");
-    punch = new Move(0, 0, "Punch");
-    burn = new Move(0, 0, "Burn");
+    bite = new Move(0, 0, "Bite", "", true);
+    scratch = new Move(0, 0, "Scratch", "", true);
+    punch = new Move(0, 0, "Punch", "", true);
+    burn = new Move(0, 0, "Burn", "", false);
 
     moves = new Move [] {bite, scratch, punch, burn};
   }
