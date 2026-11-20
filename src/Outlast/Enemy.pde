@@ -10,8 +10,8 @@ class Enemy {
   Enemy(int x, int y) {
     this.x = x;
     this.y = y;
-    this.hp = hp;
-    this.maxHp = maxHp;
+    this.hp = 100;
+    this.maxHp = 100;
     this.defense = defense;
     this.expReward = expReward;
     e1 = loadImage("EnemyNo.1.png");
