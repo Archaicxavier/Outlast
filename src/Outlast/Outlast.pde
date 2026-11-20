@@ -117,4 +117,11 @@ void keyPressed() {
     spells = false;
     abilities= false;
   }
+
+  //Test for Enemy Attack
+  if (key == '1'){
+    hola.attack();
+  }
+
+
 }
