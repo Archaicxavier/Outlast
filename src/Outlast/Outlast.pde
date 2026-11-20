@@ -13,7 +13,7 @@ void setup() {
   FlameSlash= new Move(50, 800, "Flame Slash", "Attack with your sword ablaze.", true);
   RecklessHit= new Move(330, 800, "Reckless Hit", "Abandon all semblance of\n defence in favor of a stronger\n attack.", true);
   Burn= new Move(50, 800, "Burn", "Scorch an enemy with blazing\n fire.", false);
-  Freeze= new Move(330, 800, "Freeze", "Freeze an enemy in solid ice\n before breaking it apart.", false);
+  Freeze= new Move(330, 800, "Freeze", "Freeze an enemy in solid ice\n before shattering it.", false);
   Flood= new Move(50, 880, "Shock", "Shock an enemy with a bolt \nfrom the heavens above.", false);
   Shock= new Move(330, 880, "Flood", "Drown all enemies out with a\n flood", false);
   Heal= new Move(50, 960, "Heal", "Restore some health to yourself", false);
@@ -117,11 +117,4 @@ void keyPressed() {
     spells = false;
     abilities= false;
   }
-
-  //Test for Enemy Attack
-  if (key == '1'){
-    hola.attack();
-  }
-
-
 }
