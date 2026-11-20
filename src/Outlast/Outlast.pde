@@ -19,7 +19,7 @@ void setup() {
   Heal= new Move(50, 960, "Heal", "Restore some health to yourself", false);
   Protect= new Move(330, 960, "Protect", "Create a barrier from thin air\n that increases your defense for\n 5 turns.", false);
   Defend = new Move(330, 960, "Defend", "", true);
-  hola = new Enemy(200, 300);
+  hola = new Enemy(1350, 100);
   bonjour = new Player(50, 50);
   abilities=false;
   arrow=loadImage("Arrow.png");
