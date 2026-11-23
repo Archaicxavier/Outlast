@@ -7,7 +7,7 @@ class Enemy {
   Move[] moves;
 
   // Constructor
-  Enemy(int x, int y) {
+  Enemy(int x, int y, int defense) {
     this.x = x;
     this.y = y;
     this.hp = 100;
@@ -15,10 +15,10 @@ class Enemy {
     this.defense = defense;
     this.expReward = expReward;
     e1 = loadImage("EnemyNo.1.png");
-    bite = new Move(0, 0, "Bite", "", "", true);
-    scratch = new Move(0, 0, "Scratch", "", "", true);
-    punch = new Move(0, 0, "Punch", "", "", true);
-    burn = new Move(0, 0, "Burn", "", "", false);
+    bite = new Move(0, 0, "Bite", "", "",true);
+    scratch = new Move(0, 0, "Scratch", "","", true);
+    punch = new Move(0, 0, "Punch", "","", true);
+    burn = new Move(0, 0, "Burn", "","", false);
 
     moves = new Move [] {bite, scratch, punch, burn};
   }
@@ -27,6 +27,10 @@ class Enemy {
     strokeWeight(0);
     fill(0, 0, 200);
     image(e1, x, y);
+    text("HP:", x, y);
+    text(hp, x+50, y);
+    text("/", x+98, y);
+    text(maxHp, x+105, y);
   }
 
   void takeDamage() {
