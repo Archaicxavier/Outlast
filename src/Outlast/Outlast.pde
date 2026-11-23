@@ -21,7 +21,7 @@ void setup() {
   Heal= new Move(50, 960, "Heal", "Restore some health to yourself", "2/" +Pmp, false);
   Protect= new Move(330, 960, "Protect", "Create a barrier from thin air\n that increases your defense for\n 5 turns.", "2/" +Pmp, false);
   Defend = new Move(330, 960, "Defend", "", "", true);
-  hola = new Enemy(1350, 100);
+  hola = new Enemy(1350, 100, 5);
   turn=true;
 
   abilities=false;
@@ -128,7 +128,7 @@ void keyPressed() {
     abilities= false;
   }
   if (keyCode==ENTER && abilities==false && spells==false && arrowX==13 && arrowY==776) {
-    hola.hp=hola.hp-bonjour.attack+int(random(-3, 3))-hola.defense;
+    hola.hp=hola.hp-bonjour.attack -int(random(-4, 4))+hola.defense;
     turn=false;
     arrowX=-50;
     arrowY=-50;
