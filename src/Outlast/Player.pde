@@ -2,7 +2,7 @@
 class Player {
   // Member variables
   int x, y;
-  int hp, maxHp, level, defence, mp, maxMp;
+  int hp, maxHp, level, defence, mp, maxMp, attack;
   char effect;
   PImage p1;
   ArrayList<String> moves;
@@ -16,6 +16,7 @@ class Player {
     maxHp = 150;
     mp=20;
     maxMp=20;
+    attack=20;
     level = 1;
     defence = 5;
     effect = ' ';
