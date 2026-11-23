@@ -3,24 +3,26 @@ Move Attack,FlameSlash, RecklessHit, Burn, Freeze, Flood, Shock, Heal, Protect, 
 Enemy hola;
 Player bonjour;
 boolean abilities, spells;
-int arrowX, arrowY;
+int arrowX, arrowY, Pmp;
 PImage arrow,bg1;
 void setup() {
   size(1950, 1025);
   bg1 = loadImage("TestBg.png");
   bg1.resize(1950, 1025);
-  Attack= new Move(50, 800, "Attack", "", true);
-  FlameSlash= new Move(50, 800, "Flame Slash", "Attack with your sword ablaze.", true);
-  RecklessHit= new Move(330, 800, "Reckless Hit", "Abandon all semblance of\n defence in favor of a stronger\n attack.", true);
-  Burn= new Move(50, 800, "Burn", "Scorch an enemy with blazing\n fire.", false);
-  Freeze= new Move(330, 800, "Freeze", "Freeze an enemy in solid ice\n before shattering it.", false);
-  Flood= new Move(50, 880, "Shock", "Shock an enemy with a bolt \nfrom the heavens above.", false);
-  Shock= new Move(330, 880, "Flood", "Drown all enemies out with a\n flood", false);
-  Heal= new Move(50, 960, "Heal", "Restore some health to yourself", false);
-  Protect= new Move(330, 960, "Protect", "Create a barrier from thin air\n that increases your defense for\n 5 turns.", false);
-  Defend = new Move(330, 960, "Defend", "", true);
-  hola = new Enemy(1350, 100);
   bonjour = new Player(50, 50);
+  Pmp=bonjour.mp;
+  Attack= new Move(50, 800, "Attack", "", "", true);
+  FlameSlash= new Move(50, 800, "Flame Slash", "Attack with your sword ablaze.", "2/" +Pmp, true);
+  RecklessHit= new Move(330, 800, "Reckless Hit", "Abandon all semblance of\n defence in favor of a stronger\n attack.", "2/" +bonjour.mp, true);
+  Burn= new Move(50, 800, "Burn", "Scorch an enemy with blazing\n fire.", "2/" +Pmp, false);
+  Freeze= new Move(330, 800, "Freeze", "Freeze an enemy in solid ice\n before shattering it.", "2/" +Pmp, false);
+  Flood= new Move(50, 880, "Shock", "Shock an enemy with a bolt \nfrom the heavens above.", "2/" +Pmp, false);
+  Shock= new Move(330, 880, "Flood", "Drown all enemies out with a\n flood", "2/" +Pmp, false);
+  Heal= new Move(50, 960, "Heal", "Restore some health to yourself", "2/" +Pmp, false);
+  Protect= new Move(330, 960, "Protect", "Create a barrier from thin air\n that increases your defense for\n 5 turns.", "2/" +Pmp, false);
+  Defend = new Move(330, 960, "Defend", "","", true);
+  hola = new Enemy(1350, 100);
+  
   abilities=false;
   arrow=loadImage("Arrow.png");
   arrowX=13;
@@ -30,6 +32,7 @@ void setup() {
 void draw() {
   background(bg1);
   fill(10);
+  Pmp=bonjour.mp;
   stroke(255);
   strokeWeight(4);
   rect(0, 726, 550, 300);
