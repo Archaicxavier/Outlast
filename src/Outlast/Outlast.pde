@@ -1,10 +1,10 @@
 //Xavier Probasco || Outlast || 11/1
-Move Attack,FlameSlash, RecklessHit, Burn, Freeze, Flood, Shock, Heal, Protect, Defend;
+Move Attack, FlameSlash, RecklessHit, Burn, Freeze, Flood, Shock, Heal, Protect, Defend;
 Enemy hola;
 Player bonjour;
-boolean abilities, spells;
+boolean abilities, spells, turn;
 int arrowX, arrowY, Pmp;
-PImage arrow,bg1;
+PImage arrow, bg1;
 void setup() {
   size(1950, 1025);
   bg1 = loadImage("TestBg.png");
@@ -20,10 +20,12 @@ void setup() {
   Shock= new Move(330, 880, "Flood", "Drown all enemies out with a\n flood", "2/" +Pmp, false);
   Heal= new Move(50, 960, "Heal", "Restore some health to yourself", "2/" +Pmp, false);
   Protect= new Move(330, 960, "Protect", "Create a barrier from thin air\n that increases your defense for\n 5 turns.", "2/" +Pmp, false);
-  Defend = new Move(330, 960, "Defend", "","", true);
+  Defend = new Move(330, 960, "Defend", "", "", true);
   hola = new Enemy(1350, 100);
-  
+  turn=true;
+
   abilities=false;
+  spells=false;
   arrow=loadImage("Arrow.png");
   arrowX=13;
   arrowY=776;
@@ -35,40 +37,45 @@ void draw() {
   Pmp=bonjour.mp;
   stroke(255);
   strokeWeight(4);
-  rect(0, 726, 550, 300);
-  if (abilities == false && spells == false) {
-    Attack.display();
-    text("Abilities", 330, 800);
-    text("Spells", 50, 960);
-    Defend.display();
-  } else if (abilities == true && spells == false){
-    FlameSlash.display();
-    RecklessHit.display();
-  } else if (abilities == false && spells == true){
-    Burn.display();
-    Flood.display();
-    Shock.display();
-    Freeze.display();
-    Heal.display();
-    Protect.display();
-  } 
-  if (abilities == true && arrowX == 13 && arrowY == 776) {
-    FlameSlash.desc();
-  } else if (abilities == true && arrowX == 293 && arrowY == 776) {
-    RecklessHit.desc();
-  } else if (spells == true && arrowX == 293 && arrowY == 776) {
-    Freeze.desc();
-  } else if (spells == true && arrowX == 13 && arrowY == 776) {
-    Burn.desc();
-  } else if (spells == true && arrowX == 13 && arrowY == 856) {
-    Flood.desc();
-  } else if (spells == true && arrowX == 293 && arrowY == 856) {
-    Shock.desc();
-  } else if (spells == true && arrowX == 13 && arrowY == 936) {
-    Heal.desc();
-  } else if (spells == true && arrowX == 293 && arrowY == 936) {
-    Protect.desc();
-  } 
+  if (turn==true) {
+    rect(0, 726, 550, 300);
+    if (abilities == false && spells == false) {
+      Attack.display();
+      text("Abilities", 330, 800);
+      text("Spells", 50, 960);
+      Defend.display();
+    } else if (abilities == true && spells == false) {
+      FlameSlash.display();
+      RecklessHit.display();
+    } else if (abilities == false && spells == true) {
+      Burn.display();
+      Flood.display();
+      Shock.display();
+      Freeze.display();
+      Heal.display();
+      Protect.display();
+    }
+
+    if (abilities == true && arrowX == 13 && arrowY == 776) {
+      FlameSlash.desc();
+    } else if (abilities == true && arrowX == 293 && arrowY == 776) {
+      RecklessHit.desc();
+    } else if (spells == true && arrowX == 293 && arrowY == 776) {
+      Freeze.desc();
+    } else if (spells == true && arrowX == 13 && arrowY == 776) {
+      Burn.desc();
+    } else if (spells == true && arrowX == 13 && arrowY == 856) {
+      Flood.desc();
+    } else if (spells == true && arrowX == 293 && arrowY == 856) {
+      Shock.desc();
+    } else if (spells == true && arrowX == 13 && arrowY == 936) {
+      Heal.desc();
+    } else if (spells == true && arrowX == 293 && arrowY == 936) {
+      Protect.desc();
+    }
+  } else if (turn==false) {
+  
+  }
   image(arrow, arrowX, arrowY);
 
   hola.display();
@@ -119,5 +126,17 @@ void keyPressed() {
   if (keyCode==BACKSPACE) {
     spells = false;
     abilities= false;
+  }
+  if (keyCode==ENTER && abilities==false && spells==false && arrowX==13 && arrowY==776) {
+    hola.hp=hola.hp-bonjour.attack+int(random(-3, 3))-hola.defense;
+    turn=false;
+    arrowX=-50;
+    arrowY=-50;
+  }
+  if (keyCode==ENTER && abilities==false && spells==false && arrowX==293 && arrowY==936) {
+    bonjour.defence=bonjour.defence+10;
+    turn=false;
+    arrowX=-50;
+    arrowY=-50;
   }
 }
